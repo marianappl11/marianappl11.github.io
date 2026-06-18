@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mariana Pereira-López — Economist</title>
+<meta name="description" content="Mariana Pereira-López, Senior Economist at the IFC. Research on firm productivity, management practices, digital technology adoption, and competition across developing economies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#171C26;
+    --paper:#F4F3EE;
+    --paper-2:#FBFAF6;
+    --teal:#13615C;
+    --teal-bright:#1C857D;
+    --muted:#5A6270;
+    --line:#DEDBD1;
+    --line-soft:#E8E5DC;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"IBM Plex Sans",system-ui,sans-serif;
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  a{color:inherit;}
+  ::selection{background:var(--teal);color:var(--paper-2);}
+
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:12px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--teal);
+    font-weight:500;
+    display:inline-block;
+    margin:0 0 .9rem;
+  }
+
+  /* axis-with-ticks signature divider */
+  .axis{
+    height:18px;
+    width:100%;
+    border-top:1.5px solid var(--ink);
+    background-image:repeating-linear-gradient(to right,var(--ink) 0 1px,transparent 1px 44px);
+    background-size:44px 7px;
+    background-repeat:repeat-x;
+    background-position:left top;
+    opacity:.9;
+  }
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(244,243,238,.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:var(--maxw);margin:0 auto;
+    padding:.85rem 1.5rem;
+    display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  }
+  .brand{
+    font-family:"Spectral",serif;
+    font-weight:600;font-size:1.05rem;letter-spacing:.01em;
+    text-decoration:none;white-space:nowrap;
+  }
+  .brand .dot{color:var(--teal);}
+  .nav-links{display:flex;gap:1.6rem;align-items:center;}
+  .nav-links a{
+    font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;
+    text-decoration:none;color:var(--muted);font-weight:500;
+    transition:color .2s;
+  }
+  .nav-links a:hover{color:var(--teal);}
+  .nav-cv{
+    border:1px solid var(--ink);border-radius:2px;
+    padding:.42rem .8rem;color:var(--ink)!important;
+  }
+  .nav-cv:hover{background:var(--ink);color:var(--paper-2)!important;}
+  .menu-btn{display:none;background:none;border:0;cursor:pointer;padding:.3rem;}
+  .menu-btn span{display:block;width:22px;height:1.5px;background:var(--ink);margin:5px 0;transition:.25s;}
+
+  /* ---------- LAYOUT ---------- */
+  main{max-width:var(--maxw);margin:0 auto;padding:0 1.5rem;}
+  section{padding:4.5rem 0;border-bottom:1px solid var(--line-soft);}
+  section:last-of-type{border-bottom:0;}
+  h2.section-title{
+    font-family:"Spectral",serif;font-weight:600;
+    font-size:clamp(1.6rem,3vw,2.1rem);line-height:1.1;
+    margin:.2rem 0 1.8rem;letter-spacing:-.01em;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{padding:5.5rem 0 3.2rem;border-bottom:0;}
+  .hero-grid{display:grid;grid-template-columns:1.55fr .95fr;gap:3.2rem;align-items:center;}
+  .hero-portrait{position:relative;justify-self:end;width:100%;max-width:320px;}
+  .hero-portrait::before{
+    content:"";position:absolute;top:16px;left:16px;right:-16px;bottom:-16px;
+    background:var(--teal);border-radius:4px;z-index:0;
+  }
+  .hero-portrait img{
+    position:relative;z-index:1;display:block;width:100%;aspect-ratio:1/1;
+    object-fit:cover;border-radius:4px;border:3px solid var(--paper);
+    filter:saturate(1.02);
+  }
+  .hero .eyebrow{margin-bottom:1.2rem;}
+  .hero h1{
+    font-family:"Spectral",serif;font-weight:600;
+    font-size:clamp(2.6rem,7vw,4.7rem);
+    line-height:1.02;letter-spacing:-.02em;
+    margin:0 0 1.4rem;max-width:14ch;
+  }
+  .hero .lede{
+    font-size:clamp(1.1rem,2.2vw,1.4rem);
+    line-height:1.45;color:var(--ink);
+    max-width:46ch;margin:0 0 2rem;
+    font-family:"Spectral",serif;font-style:italic;font-weight:400;
+  }
+  .hero .lede em{color:var(--teal);font-style:italic;}
+  .meta-row{
+    display:flex;flex-wrap:wrap;gap:.65rem 1.5rem;align-items:center;
+    font-size:.95rem;color:var(--muted);
+  }
+  .meta-row .role{color:var(--ink);font-weight:500;}
+  .cta-row{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2.3rem;}
+  .btn{
+    display:inline-flex;align-items:center;gap:.5rem;
+    text-decoration:none;font-size:.9rem;font-weight:500;
+    padding:.7rem 1.15rem;border-radius:2px;transition:.2s;
+    letter-spacing:.02em;
+  }
+  .btn-primary{background:var(--teal);color:var(--paper-2);}
+  .btn-primary:hover{background:var(--teal-bright);}
+  .btn-ghost{border:1px solid var(--ink);color:var(--ink);}
+  .btn-ghost:hover{background:var(--ink);color:var(--paper-2);}
+  .btn svg{width:16px;height:16px;}
+
+  .hero-axis{margin-top:3.4rem;}
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:3.5rem;}
+  .about-body p{margin:0 0 1.1rem;}
+  .about-body p:last-child{margin-bottom:0;}
+  .aside h3{
+    font-family:"IBM Plex Mono",monospace;font-size:.72rem;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--teal);
+    margin:0 0 .7rem;font-weight:500;
+  }
+  .aside .block{margin-bottom:1.8rem;}
+  .aside .block:last-child{margin-bottom:0;}
+  .aside ul{list-style:none;margin:0;padding:0;}
+  .aside li{
+    font-size:.92rem;padding:.4rem 0;border-bottom:1px dotted var(--line);
+    display:flex;justify-content:space-between;gap:1rem;
+  }
+  .aside li:last-child{border-bottom:0;}
+  .aside li .yr{font-family:"IBM Plex Mono",monospace;font-size:.78rem;color:var(--muted);white-space:nowrap;}
+
+  /* interests chips */
+  .interests{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:.3rem;}
+  .chip{
+    font-size:.85rem;border:1px solid var(--line);background:var(--paper-2);
+    padding:.32rem .75rem;border-radius:2px;color:var(--ink);
+  }
+
+  /* ---------- PUBLICATIONS ---------- */
+  .pub-tabs{display:flex;gap:.4rem;margin-bottom:2rem;flex-wrap:wrap;}
+  .pub-tab{
+    font-family:"IBM Plex Mono",monospace;font-size:.78rem;letter-spacing:.05em;
+    text-transform:uppercase;border:1px solid var(--line);background:transparent;
+    color:var(--muted);padding:.5rem .9rem;border-radius:2px;cursor:pointer;transition:.2s;
+  }
+  .pub-tab[aria-selected="true"]{background:var(--ink);color:var(--paper-2);border-color:var(--ink);}
+  .pub-tab:hover{border-color:var(--ink);color:var(--ink);}
+  .pub-tab[aria-selected="true"]:hover{color:var(--paper-2);}
+
+  ol.pubs{list-style:none;counter-reset:p;margin:0;padding:0;}
+  ol.pubs li{
+    counter-increment:p;
+    display:grid;grid-template-columns:2.4rem 1fr;gap:0 1rem;
+    padding:1.25rem 0;border-top:1px solid var(--line-soft);
+  }
+  ol.pubs li:first-child{border-top:0;}
+  ol.pubs li::before{
+    content:counter(p,decimal-leading-zero);
+    font-family:"IBM Plex Mono",monospace;font-size:.78rem;color:var(--teal);
+    padding-top:.2rem;
+  }
+  .pub-body{font-size:.98rem;line-height:1.55;}
+  .pub-body .authors{color:var(--ink);}
+  .pub-body .me{font-weight:600;}
+  .pub-title{font-family:"Spectral",serif;font-size:1.12rem;font-weight:500;display:block;margin:.15rem 0 .25rem;line-height:1.3;}
+  .pub-title a{color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--line);transition:.2s;}
+  .pub-title a:hover{border-color:var(--teal);color:var(--teal);}
+  .pub-venue{color:var(--muted);font-size:.92rem;}
+  .pub-venue .yr{font-family:"IBM Plex Mono",monospace;}
+  .pub-tags{margin-top:.45rem;display:flex;gap:.45rem;flex-wrap:wrap;}
+  .tag{
+    font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.06em;
+    text-transform:uppercase;padding:.2rem .5rem;border-radius:2px;
+    background:rgba(19,97,92,.1);color:var(--teal);
+  }
+  .tag.status{background:rgba(184,134,47,.14);color:#8a6418;}
+  .pub-panel[hidden]{display:none;}
+
+  /* ---------- TEACHING ---------- */
+  .teach-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem 3rem;}
+  .teach-item{border-left:2px solid var(--teal);padding-left:1rem;}
+  .teach-item h4{margin:0 0 .15rem;font-size:1rem;font-weight:600;font-family:"Spectral",serif;}
+  .teach-item p{margin:0;font-size:.9rem;color:var(--muted);}
+
+  /* ---------- AWARDS ---------- */
+  .awards{list-style:none;margin:0;padding:0;}
+  .awards li{
+    display:grid;grid-template-columns:6.5rem 1fr;gap:1.3rem;
+    padding:.95rem 0;border-top:1px solid var(--line-soft);font-size:.96rem;
+  }
+  .awards li:first-child{border-top:0;}
+  .awards .yr{font-family:"IBM Plex Mono",monospace;font-size:.82rem;color:var(--teal);padding-top:.1rem;}
+
+  /* ---------- CONTACT / FOOTER ---------- */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;}
+  .contact-grid p{margin:0 0 1.2rem;max-width:40ch;}
+  .links-list{list-style:none;margin:0;padding:0;}
+  .links-list li{border-top:1px solid var(--line-soft);}
+  .links-list li:first-child{border-top:0;}
+  .links-list a{
+    display:flex;align-items:center;justify-content:space-between;gap:1rem;
+    padding:.95rem 0;text-decoration:none;color:var(--ink);transition:.2s;
+  }
+  .links-list a:hover{color:var(--teal);padding-left:.4rem;}
+  .links-list .label{font-weight:500;}
+  .links-list .val{font-family:"IBM Plex Mono",monospace;font-size:.82rem;color:var(--muted);}
+  footer{padding:2.5rem 0;font-size:.82rem;color:var(--muted);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;}
+  footer .mono{font-family:"IBM Plex Mono",monospace;}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:820px){
+    .about-grid,.contact-grid{grid-template-columns:1fr;gap:2.4rem;}
+    .teach-grid{grid-template-columns:1fr;}
+    .hero-grid{grid-template-columns:1fr;gap:2rem;}
+    .hero-portrait{order:-1;justify-self:center;max-width:200px;}
+    .hero-portrait::before{top:10px;left:10px;right:-10px;bottom:-10px;}
+  }
+  @media(max-width:680px){
+    body{font-size:16px;}
+    .nav-links{
+      position:fixed;inset:56px 0 auto 0;flex-direction:column;align-items:flex-start;
+      background:var(--paper);border-bottom:1px solid var(--line);
+      padding:1.2rem 1.5rem;gap:1.1rem;
+      transform:translateY(-130%);transition:transform .3s;
+    }
+    .nav-links.open{transform:none;}
+    .menu-btn{display:block;}
+    .nav-cv{align-self:flex-start;}
+    section{padding:3.4rem 0;}
+    ol.pubs li{grid-template-columns:1fr;gap:.3rem;}
+    ol.pubs li::before{padding-top:0;}
+    .awards li{grid-template-columns:1fr;gap:.15rem;}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{scroll-behavior:auto!important;}
+    .reveal{opacity:1;transform:none;transition:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">Mariana Pereira-López<span class="dot">.</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cv" href="CV_Mariana_Pereira-Lopez.docx">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <span class="eyebrow">Senior Economist · DEC Private Markets — World Bank Group</span>
+        <h1>Mariana<br>Pereira-López</h1>
+        <p class="lede">I study how firms <em>grow, manage, and adopt technology</em> — and what that means for productivity and development.</p>
+        <div class="meta-row">
+          <span class="role">Private Markets Group, Development Economics (DEC), World Bank Group</span>
+          <span>·</span>
+          <span>Ph.D. Economics, El Colegio de México</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#publications">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+            View research
+          </a>
+          <a class="btn btn-ghost" href="https://scholar.google.com/citations?user=W-WWIFcAAAAJ&hl=en" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 9l11 7 9-5.7V17h2V9L12 2zm0 13.5L4.9 11 12 6.5 19.1 11 12 15.5z"/></svg>
+            Google Scholar
+          </a>
+        </div>
+      </div>
+      <div class="hero-portrait">
+        <img src="headshot.jpg" alt="Portrait of Mariana Pereira-López" width="320" height="320">
+      </div>
+    </div>
+    <div class="hero-axis axis" aria-hidden="true"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <span class="eyebrow">About</span>
+    <div class="about-grid">
+      <div class="about-body reveal">
+        <h2 class="section-title">Empirical economics of firms and productivity</h2>
+        <p>Mariana Pereira-López is a Senior Economist in the Private Markets Group within the Development Economics Vice Presidency (DEC) at the World Bank Group. Her research focuses on firm-level dynamics and productivity, management practices, technology adoption, innovation, entrepreneurship, impact evaluations, competition, energy efficiency, startup ecosystems, and venture capital dynamics.</p>
+        <p>Her work has been published in leading journals, including the American Economic Journal: Macroeconomics, PNAS, the Journal of Development Economics, Research Policy, the World Bank Economic Review, and the Journal of Environmental Economics and Management.</p>
+        <p>She holds a Ph.D. and an M.A. in Economics from El Colegio de México and has more than sixteen years of experience across government, academia, and international organizations.</p>
+      </div>
+      <aside class="aside reveal">
+        <div class="block">
+          <h3>Appointments</h3>
+          <ul>
+            <li><span>Sr. Economist, DEC Private Markets</span><span class="yr">2026—</span></li>
+            <li><span>Sr. Economist, IFC</span><span class="yr">2022—25</span></li>
+            <li><span>Economist, World Bank</span><span class="yr">2021—22</span></li>
+            <li><span>Assoc. Professor, Ibero</span><span class="yr">2019—21</span></li>
+          </ul>
+        </div>
+        <div class="block">
+          <h3>Education</h3>
+          <ul>
+            <li><span>Ph.D. Economics, Colmex</span><span class="yr">2013</span></li>
+            <li><span>M.A. Economics, Colmex</span><span class="yr">2010</span></li>
+            <li><span>B.A. Economics, UP</span><span class="yr">2002</span></li>
+          </ul>
+        </div>
+        <div class="block">
+          <h3>Affiliations</h3>
+          <ul>
+            <li><span>LACEA · AEA</span></li>
+            <li><span>Econometric Society</span></li>
+            <li><span>Royal Economic Society</span></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research">
+    <span class="eyebrow">Research interests</span>
+    <h2 class="section-title">What I work on</h2>
+    <div class="interests reveal">
+      <span class="chip">Firm dynamics &amp; productivity</span>
+      <span class="chip">Management practices</span>
+      <span class="chip">Technology adoption</span>
+      <span class="chip">Innovation</span>
+      <span class="chip">Entrepreneurship</span>
+      <span class="chip">Competition</span>
+      <span class="chip">Impact evaluation &amp; RCTs</span>
+      <span class="chip">Startup ecosystems</span>
+      <span class="chip">Venture capital dynamics</span>
+      <span class="chip">Energy efficiency</span>
+      <span class="chip">Applied econometrics</span>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <span class="eyebrow">Selected work</span>
+    <h2 class="section-title">Publications &amp; working papers</h2>
+
+    <div class="pub-tabs" role="tablist" aria-label="Publication categories">
+      <button class="pub-tab" role="tab" aria-selected="true" data-panel="published">Published</button>
+      <button class="pub-tab" role="tab" aria-selected="false" data-panel="working">Working papers &amp; in progress</button>
+    </div>
+
+    <!-- PUBLISHED -->
+    <div class="pub-panel reveal" id="published" role="tabpanel">
+      <ol class="pubs">
+        <li><div class="pub-body">
+          <span class="authors">Bloom, N., Iacovone, L., <span class="me">Pereira-López, M.</span>, &amp; Van Reenen, J.</span>
+          <span class="pub-title"><a href="https://www.aeaweb.org/articles?id=10.1257/mac.20220034" target="_blank" rel="noopener">Management and Misallocation in Mexico</a></span>
+          <span class="pub-venue">American Economic Journal: Macroeconomics, 18(2), 429–456 · <span class="yr">2026</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors">Scur, D., Ohlmacher, S., Van Reenen, J., Bennedsen, M., Bloom, N., Choudhary, A., …, <span class="me">Pereira-López, M.</span>, …, Zimmermann, F.</span>
+          <span class="pub-title"><a href="https://www.pnas.org/doi/10.1073/pnas.2412205121" target="_blank" rel="noopener">The Natural Law of Management</a></span>
+          <span class="pub-venue">Proceedings of the National Academy of Sciences (PNAS) · <span class="yr">2024</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors">Iacovone, L., <span class="me">Pereira-López, M.</span>, &amp; Schiffbauer, M.</span>
+          <span class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0048733323000707" target="_blank" rel="noopener">Competition makes IT better: Evidence on when firms use IT more effectively</a></span>
+          <span class="pub-venue">Research Policy, 52(8), 104786 · <span class="yr">2023</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors">Iacovone, L., Muñoz Moreno, R., Olaberría, E., &amp; <span class="me">Pereira-López, M.</span></span>
+          <span class="pub-title"><a href="https://openknowledge.worldbank.org/handle/10986/37190" target="_blank" rel="noopener">Productivity Growth in Mexico: Understanding Main Dynamics and Key Drivers</a></span>
+          <span class="pub-venue">World Bank, Washington, DC · <span class="yr">2022</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors">Calì, M., Cantore, N., Iacovone, L., <span class="me">Pereira-López, M.</span>, &amp; Presidente, G.</span>
+          <span class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0095069621001315" target="_blank" rel="noopener">Too much energy: The perverse effect of low fuel prices on firms</a></span>
+          <span class="pub-venue">Journal of Environmental Economics and Management, 111, 102587 · <span class="yr">2022</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors">Cazzuffi, C., &amp; <span class="me">Pereira-López, M.</span></span>
+          <span class="pub-title"><a href="https://sobremexico-revista.ibero.mx/index.php/Revista_Sobre_Mexico/article/view/77" target="_blank" rel="noopener">Internal Migration and Convergence in Mexico, 2000–2010</a></span>
+          <span class="pub-venue">Sobre México: Temas de Economía, (1), 127–166 · <span class="yr">2020</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors">Iacovone, L., Ferro, E., <span class="me">Pereira-López, M.</span>, &amp; Zavacka, V.</span>
+          <span class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0304387818304292" target="_blank" rel="noopener">Banking crises and exports: Lessons from the past</a></span>
+          <span class="pub-venue">Journal of Development Economics, 138, 192–204 · <span class="yr">2019</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors">Cazzuffi, C., <span class="me">Pereira-López, M.</span>, &amp; Soloaga, I.</span>
+          <span class="pub-title"><a href="https://doi.org/10.1016/j.foodpol.2017.02.003" target="_blank" rel="noopener">Local poverty reduction in Chile and Mexico: The role of food manufacturing growth</a></span>
+          <span class="pub-venue">Food Policy, 68, 160–185 · <span class="yr">2017</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors">Iacovone, L., <span class="me">Pereira-López, M.</span>, &amp; Schiffbauer, M.</span>
+          <span class="pub-title"><a href="http://wber.oxfordjournals.org/content/early/2016/04/20/wber.lhw023.short" target="_blank" rel="noopener">ICT Use, Competitive Pressures, and Firm Performance in Mexico</a></span>
+          <span class="pub-venue">The World Bank Economic Review, lhw023 · <span class="yr">2016</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors"><span class="me">Pereira, M.</span>, Soloaga, I., &amp; Bravo, E.</span>
+          <span class="pub-title"><a href="https://ceey.org.mx/poverty-inequality-and-low-social-mobility-territorial-traps-in-chile-mexico-and-peru/" target="_blank" rel="noopener">Poverty and Inequality Traps in Mexico, 1990–2000–2010</a></span>
+          <span class="pub-venue">In Poverty, Inequality, and Low Social Mobility: Territorial Traps in Chile, Mexico and Peru (CEEY) · <span class="yr">2016</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors"><span class="me">Pereira-López, M.</span>, &amp; Soloaga, I.</span>
+          <span class="pub-title"><a href="http://www.economia.uanl.mx/revistaensayos/xxxiv/1/1_External_Returns_to_Higher_Education_in_Mexico.pdf" target="_blank" rel="noopener">External returns to higher education in Mexico, 2000–2010</a></span>
+          <span class="pub-venue">Ensayos Revista de Economía, XXXIV(1), 1–34 · <span class="yr">2015</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors"><span class="me">Pereira, M.</span>, &amp; Soloaga, I.</span>
+          <span class="pub-title"><a href="http://boletintechint.com/pages/BoletinDetalle.aspx?language=SPANISH&entityID=479" target="_blank" rel="noopener">Crecimiento regional de la industria manufacturera en México, 1988–2008</a></span>
+          <span class="pub-venue">Boletín Informativo Techint, 338, 49–68 · <span class="yr">2012</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors">Montenegro, C., <span class="me">Pereira, M.</span>, &amp; Soloaga, I.</span>
+          <span class="pub-title"><a href="http://www.econ.uchile.cl/uploads/publicacion/509f5aeeea3f59e01b9c84259bfbed3ef6d3ed24.pdf" target="_blank" rel="noopener">El efecto de China en el comercio internacional de América Latina</a></span>
+          <span class="pub-venue">Estudios de Economía, 39(2) · <span class="yr">2011</span></span>
+        </div></li>
+      </ol>
+    </div>
+
+    <!-- WORKING -->
+    <div class="pub-panel reveal" id="working" role="tabpanel" hidden>
+      <ol class="pubs">
+        <li><div class="pub-body">
+          <span class="authors">Cruz, M. J., <span class="me">Pereira-López, M.</span>, &amp; Salgado Chávez, E.</span>
+          <span class="pub-title"><a href="https://documents.worldbank.org/curated/en/099045212072337941" target="_blank" rel="noopener">Disruptive technologies and finance: An analysis of digital startups in Africa</a></span>
+          <span class="pub-venue">Policy Research Working Paper No. 10633, World Bank Group · <span class="yr">2024</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors">Grover, A., &amp; <span class="me">Pereira-López, M.</span></span>
+          <span class="pub-title"><a href="https://documents.worldbank.org/curated/en/099707110032313266" target="_blank" rel="noopener">Does informality depress investments and job recovery? Firm-level evidence from the COVID-19 crisis in South Asia</a></span>
+          <span class="pub-venue">Policy Research Working Paper No. 10580, World Bank Group · <span class="yr">2024</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors">Grover, A., &amp; <span class="me">Pereira-López, M.</span></span>
+          <span class="pub-title"><a href="https://documents.worldbank.org/curated/en/099747310022319502" target="_blank" rel="noopener">Do shocks perpetuate disparities within and across informal firms? Evidence from the COVID-19 pandemic in South Asia</a></span>
+          <span class="pub-venue">Policy Research Working Paper No. 10579, World Bank Group · <span class="yr">2024</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors">Cazzuffi, C., <span class="me">Pereira-López, M.</span>, Rosales, I., &amp; Soloaga, I.</span>
+          <span class="pub-title"><a href="https://publications.iadb.org/en/monopsony-power-and-labor-income-inequality-mexico" target="_blank" rel="noopener">Monopsony Power and Labor Income Inequality in Mexico</a></span>
+          <span class="pub-venue">IDB Working Paper No. 13044, Inter-American Development Bank · <span class="yr">2023</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors">Reed, T., <span class="me">Pereira-López, M.</span>, Urrutia Arrieta, A. F., &amp; Iacovone, L.</span>
+          <span class="pub-title"><a href="http://documents.worldbank.org/curated/en/099455012222225128" target="_blank" rel="noopener">Cartels, antitrust enforcement, and industry performance: Evidence from Mexico</a></span>
+          <span class="pub-venue">Policy Research Working Paper No. 10269, World Bank Group · <span class="yr">2022</span></span>
+          <span class="pub-tags"><span class="tag status">Under review · AEJ: Applied</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors">Cirera, X., Cruz, M., Grover, A., Iacovone, L., Medvedev, D., <span class="me">Pereira-López, M.</span>, &amp; Reyes, S.</span>
+          <span class="pub-title"><a href="https://openknowledge.worldbank.org/handle/10986/36428" target="_blank" rel="noopener">Firm Recovery during COVID-19: Six Stylized Facts</a></span>
+          <span class="pub-venue">Policy Research Working Paper No. 9810, World Bank · <span class="yr">2021</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors">Iacovone, L., &amp; <span class="me">Pereira-López, M.</span></span>
+          <span class="pub-title"><a href="http://documents.worldbank.org/curated/en/295511515507675734/pdf/WPS8298.pdf" target="_blank" rel="noopener">ICT adoption and wage inequality: Evidence from Mexican firms</a></span>
+          <span class="pub-venue">Policy Research Working Paper No. 8298, World Bank Group · <span class="yr">2016</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors"><span class="me">Pereira-López, M.</span>, &amp; Soloaga, I.</span>
+          <span class="pub-title"><a href="http://www.iberoeconomia.mx/images/stories/Publicaciones/DocumentosTrabajo/Working_Paper_5_2013_Local_multipliers_and_the_informal_sector_in_Mexico_PereiraSoloaga_2013.pdf" target="_blank" rel="noopener">Local Multipliers and Informality in Mexico</a></span>
+          <span class="pub-venue">Working Paper No. 5, Universidad Iberoamericana · <span class="yr">2013</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors"><span class="me">Pereira-López, M.</span></span>
+          <span class="pub-title"><a href="http://www.cedlas.econo.unlp.edu.ar/wp/en/doc-cedlas153-pdf/" target="_blank" rel="noopener">Indirect job creation and the informal sector in Mexico</a></span>
+          <span class="pub-venue">CEDLAS Working Paper No. 153 · <span class="yr">2013</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors"><span class="me">Pereira-López, M.</span>, &amp; Soloaga, I.</span>
+          <span class="pub-title"><a href="http://cee.colmex.mx/documentos/documentos-de-trabajo/2012/dt20125.pdf" target="_blank" rel="noopener">Determinantes del crecimiento regional por sector de la industria manufacturera en México, 1988–2008</a></span>
+          <span class="pub-venue">Documento de Trabajo DT-2012-5, CEE, El Colegio de México · <span class="yr">2012</span></span>
+        </div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- TEACHING -->
+  <section id="teaching">
+    <span class="eyebrow">Teaching</span>
+    <h2 class="section-title">Courses taught</h2>
+    <div class="teach-grid reveal">
+      <div class="teach-item">
+        <h4>Cross-Section &amp; Panel Econometrics</h4>
+        <p>B.A. Economics · Universidad Iberoamericana</p>
+      </div>
+      <div class="teach-item">
+        <h4>Introduction to Econometrics</h4>
+        <p>B.A. Economics · Universidad Iberoamericana</p>
+      </div>
+      <div class="teach-item">
+        <h4>Quantitative Methods for Public Policy I &amp; II</h4>
+        <p>M.A. Public Policy · Universidad Iberoamericana</p>
+      </div>
+      <div class="teach-item">
+        <h4>Economic Environment</h4>
+        <p>MBA · IPADE Business School</p>
+      </div>
+      <div class="teach-item">
+        <h4>Public Finance</h4>
+        <p>B.A. Economics · Universidad Panamericana</p>
+      </div>
+      <div class="teach-item">
+        <h4>Mexico's Economic, Political &amp; Social Issues</h4>
+        <p>B.A. Accounting · Universidad Panamericana</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARDS -->
+  <section id="awards">
+    <span class="eyebrow">Honors</span>
+    <h2 class="section-title">Fellowships &amp; awards</h2>
+    <ul class="awards reveal">
+      <li><span class="yr">2022</span><span>SAR &amp; LCR VPU Team Awards, World Bank Group</span></li>
+      <li><span class="yr">2020</span><span>Fellow, Mexican National System of Researchers (SNI) — Level 1</span></li>
+      <li><span class="yr">2019</span><span>Research grant, Inter-American Development Bank — firm concentration and income inequality in Mexico</span></li>
+      <li><span class="yr">2018</span><span>FY18 VPU Team Award — "Innovating to Promote Female Entrepreneurs to Thrive in Mexico," World Bank Group</span></li>
+      <li><span class="yr">2017</span><span>Fellow, Mexican National System of Researchers (SNI) — Level C</span></li>
+      <li><span class="yr">2014</span><span>Winner, VIII Research Contest, Ensayos Revista de Economía (UANL)</span></li>
+      <li><span class="yr">2013</span><span>Winner, III Essay Contest on Labor and Social Issues in Latin America, CEDLAS / IDRC</span></li>
+      <li><span class="yr">2010</span><span>Colmex Excellence Award — highest GPA, M.A. in Economics, El Colegio de México</span></li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <span class="eyebrow">Get in touch</span>
+    <div class="contact-grid">
+      <div class="reveal">
+        <h2 class="section-title">Contact</h2>
+        <p>I welcome questions about my research, data and survey collaborations, seminar invitations, and referee requests. Email is the best way to reach me.</p>
+        <a class="btn btn-primary" href="mailto:mpereiralopez@ifc.org">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 6l8 6 8-6"/></svg>
+          Email me
+        </a>
+      </div>
+      <ul class="links-list reveal">
+        <li><a href="mailto:mpereiralopez@ifc.org"><span class="label">Email</span><span class="val">mpereiralopez@ifc.org</span></a></li>
+        <li><a href="https://scholar.google.com/citations?user=W-WWIFcAAAAJ&hl=en" target="_blank" rel="noopener"><span class="label">Google Scholar</span><span class="val">profile →</span></a></li>
+        <li><a href="CV_Mariana_Pereira-Lopez.docx"><span class="label">Curriculum Vitae</span><span class="val">download →</span></a></li>
+        <li><a href="https://www.worldbank.org/en/about/unit/unit-dec" target="_blank" rel="noopener"><span class="label">Affiliation</span><span class="val">DEC · World Bank Group →</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <span>© <span id="yr"></span> Mariana Pereira-López</span>
+    <span class="mono">Updated June 2026 · Washington, DC</span>
+  </footer>
+
+</main>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  // publication tabs
+  const tabs = document.querySelectorAll('.pub-tab');
+  tabs.forEach(tab => tab.addEventListener('click', () => {
+    tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
+    tab.setAttribute('aria-selected', 'true');
+    document.querySelectorAll('.pub-panel').forEach(p => p.hidden = true);
+    document.getElementById(tab.dataset.panel).hidden = false;
+  }));
+
+  // reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
