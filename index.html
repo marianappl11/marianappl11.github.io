@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mariana Pereira-López — Economist</title>
-<meta name="description" content="Mariana Pereira-López, Senior Economist at the IFC. Research on firm productivity, management practices, digital technology adoption, and competition across developing economies.">
+<meta name="description" content="Mariana Pereira-López, Senior Economist in the Private Markets Group, Development Economics (DEC), World Bank Group. Research on firm dynamics, productivity, management practices, technology adoption, entrepreneurship, and venture capital across emerging markets.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -145,6 +145,8 @@
   .btn-ghost{border:1px solid var(--ink);color:var(--ink);}
   .btn-ghost:hover{background:var(--ink);color:var(--paper-2);}
   .btn svg{width:16px;height:16px;}
+  .btn-icon{padding:.7rem;}
+  .btn-icon svg{width:18px;height:18px;}
 
   .hero-axis{margin-top:3.4rem;}
 
@@ -213,6 +215,26 @@
   }
   .tag.status{background:rgba(92,101,117,.15);color:#535c6b;}
   .pub-panel[hidden]{display:none;}
+
+  .pub-subhead{
+    font-family:"Spectral",serif;font-size:1.2rem;font-weight:600;
+    margin:2.6rem 0 1rem;padding-top:1.8rem;border-top:1px solid var(--line);
+  }
+  .wip{list-style:none;margin:0;padding:0;}
+  .wip li{padding:.75rem 0;border-top:1px solid var(--line-soft);font-size:.96rem;line-height:1.5;}
+  .wip li:first-child{border-top:0;}
+  .wip .wt{font-family:"Spectral",serif;font-weight:500;color:var(--ink);}
+  .wip .wc{color:var(--muted);font-size:.87rem;display:block;margin-top:.15rem;}
+  .wip a{color:var(--teal);text-decoration:none;border-bottom:1px solid var(--line);}
+  .wip a:hover{border-color:var(--teal);}
+
+  /* ---------- TALKS ---------- */
+  .talks{list-style:none;margin:0;padding:0;}
+  .talks li{padding:.9rem 0;border-top:1px solid var(--line-soft);}
+  .talks li:first-child{border-top:0;}
+  .talks .tvenue{font-family:"Spectral",serif;font-weight:600;font-size:1.05rem;}
+  .talks .tyr{font-family:"IBM Plex Mono",monospace;font-size:.76rem;color:var(--teal);margin-left:.55rem;white-space:nowrap;}
+  .talks .tpaper{display:block;color:var(--muted);font-size:.9rem;font-style:italic;margin-top:.12rem;}
 
   /* ---------- TEACHING ---------- */
   .teach-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem 3rem;}
@@ -292,9 +314,10 @@
       <a href="#about">About</a>
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
+      <a href="#talks">Talks</a>
       <a href="#teaching">Teaching</a>
       <a href="#contact">Contact</a>
-      <a class="nav-cv" href="CV_Mariana_Pereira-Lopez.docx">CV</a>
+      <a class="nav-cv" href="CV_Mariana_Pereira-Lopez.pdf">CV</a>
     </nav>
   </div>
 </header>
@@ -322,6 +345,12 @@
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 9l11 7 9-5.7V17h2V9L12 2zm0 13.5L4.9 11 12 6.5 19.1 11 12 15.5z"/></svg>
             Google Scholar
           </a>
+          <a class="btn btn-ghost btn-icon" href="https://www.linkedin.com/in/mariana-pereira-42589736" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h4V21H3zM9 8.98h3.8v1.64h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9z"/></svg>
+          </a>
+          <a class="btn btn-ghost btn-icon" href="https://x.com/mariana_ppl11" target="_blank" rel="noopener" aria-label="X (Twitter)">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.53 3H21l-7.19 8.21L22 21h-6.56l-5.14-6.72L4.4 21H1l7.69-8.78L2 3h6.69l4.65 6.13L17.53 3zm-1.15 16h1.83L7.7 4.9H5.74L16.38 19z"/></svg>
+          </a>
         </div>
       </div>
       <div class="hero-portrait">
@@ -345,10 +374,10 @@
         <div class="block">
           <h3>Appointments</h3>
           <ul>
-            <li><span>Sr. Economist, DEC Private Markets</span><span class="yr">2026—</span></li>
-            <li><span>Sr. Economist, IFC</span><span class="yr">2022—25</span></li>
+            <li><span>Sr. Economist, DEC Private Markets</span><span class="yr">2022—</span></li>
             <li><span>Economist, World Bank</span><span class="yr">2021—22</span></li>
             <li><span>Assoc. Professor, Ibero</span><span class="yr">2019—21</span></li>
+            <li><span>Consultant, World Bank</span><span class="yr">2014—21</span></li>
           </ul>
         </div>
         <div class="block">
@@ -397,6 +426,7 @@
 
     <div class="pub-tabs" role="tablist" aria-label="Publication categories">
       <button class="pub-tab" role="tab" aria-selected="true" data-panel="published">Published</button>
+      <button class="pub-tab" role="tab" aria-selected="false" data-panel="reports">Reports &amp; chapters</button>
       <button class="pub-tab" role="tab" aria-selected="false" data-panel="working">Working papers &amp; in progress</button>
     </div>
 
@@ -483,9 +513,54 @@
       </ol>
     </div>
 
-    <!-- WORKING -->
+    <!-- REPORTS & CHAPTERS -->
+    <div class="pub-panel reveal" id="reports" role="tabpanel" hidden>
+      <ol class="pubs">
+        <li><div class="pub-body">
+          <span class="authors">Benkirane, Z., Cruz, M., &amp; <span class="me">Pereira-López, M.</span></span>
+          <span class="pub-title">Policies to Unlock Digital Private Investment</span>
+          <span class="pub-venue">In Digital Opportunities in African Businesses, World Bank Group / IFC · <span class="yr">2024</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors">Cruz, M., Haile, B., &amp; <span class="me">Pereira-López, M.</span></span>
+          <span class="pub-title">Tech Start-Ups and Digital Platforms</span>
+          <span class="pub-venue">In Digital Opportunities in African Businesses, World Bank Group / IFC · <span class="yr">2024</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors">Cruz, M., Mölders, F., &amp; <span class="me">Pereira-López, M.</span></span>
+          <span class="pub-title">Financing Digitalization of Businesses in Africa</span>
+          <span class="pub-venue">In Digital Opportunities in African Businesses, World Bank Group / IFC · <span class="yr">2024</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors">World Bank Group</span>
+          <span class="pub-title">Creating Ecosystems for Innovation in a Post-Coal Region: Evidence from an RCT in the Czech Republic</span>
+          <span class="pub-venue">Strengthening Monitoring &amp; Evaluation of Innovation Programs in the EU, World Bank · <span class="yr">2024</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors">World Bank Group</span>
+          <span class="pub-title">Developing High-Growth Entrepreneurship Through Knowledge and Mindset Interventions: Evidence from an RCT in the Czech Republic</span>
+          <span class="pub-venue">Strengthening Monitoring &amp; Evaluation of Innovation Programs in the EU, World Bank · <span class="yr">2024</span></span>
+        </div></li>
+      </ol>
+    </div>
     <div class="pub-panel reveal" id="working" role="tabpanel" hidden>
       <ol class="pubs">
+        <li><div class="pub-body">
+          <span class="authors">Colonnelli, E., Cruz, M., <span class="me">Pereira-López, M.</span>, Porzio, T., &amp; Zhao, C.</span>
+          <span class="pub-title"><a href="https://www.nber.org/papers/w35261" target="_blank" rel="noopener">Startups in Africa</a></span>
+          <span class="pub-venue">NBER Working Paper No. 35261 · <span class="yr">2026</span></span>
+        </div></li>
+
+        <li><div class="pub-body">
+          <span class="authors">Colonnelli, E., Lerner, J., Cruz, M., &amp; <span class="me">Pereira-López, M.</span></span>
+          <span class="pub-title">How Do Emerging Markets Investors Make Decisions? Evidence from Venture Capital and Private Equity</span>
+          <span class="pub-venue">Working paper · <span class="yr">2025</span></span>
+        </div></li>
+
         <li><div class="pub-body">
           <span class="authors">Cruz, M. J., <span class="me">Pereira-López, M.</span>, &amp; Salgado Chávez, E.</span>
           <span class="pub-title"><a href="https://documents.worldbank.org/curated/en/099045212072337941" target="_blank" rel="noopener">Disruptive technologies and finance: An analysis of digital startups in Africa</a></span>
@@ -514,7 +589,7 @@
           <span class="authors">Reed, T., <span class="me">Pereira-López, M.</span>, Urrutia Arrieta, A. F., &amp; Iacovone, L.</span>
           <span class="pub-title"><a href="http://documents.worldbank.org/curated/en/099455012222225128" target="_blank" rel="noopener">Cartels, antitrust enforcement, and industry performance: Evidence from Mexico</a></span>
           <span class="pub-venue">Policy Research Working Paper No. 10269, World Bank Group · <span class="yr">2022</span></span>
-          <span class="pub-tags"><span class="tag status">Under review · The Journal of Law and Economics</span></span>
+          <span class="pub-tags"><span class="tag status">Under review · Journal of Law and Economics</span></span>
         </div></li>
 
         <li><div class="pub-body">
@@ -547,7 +622,65 @@
           <span class="pub-venue">Documento de Trabajo DT-2012-5, CEE, El Colegio de México · <span class="yr">2012</span></span>
         </div></li>
       </ol>
+
+      <h3 class="pub-subhead">Work in progress</h3>
+      <ul class="wip">
+        <li><span class="wt">The Role of AI in Stimulating Business Learning and Linkages</span>
+          <span class="wc">with S. J. Anderson, L. Iacovone, A. Menzel, F. Münch &amp; R. Suhag · <a href="https://doi.org/10.1257/rct.15892-1.0" target="_blank" rel="noopener">AEA RCT Registry</a></span></li>
+        <li><span class="wt">Building Sales Capability in SMEs: A Scalable Training Program to Drive Sales Growth</span>
+          <span class="wc">with S. J. Anderson, C. Spina, F. Campos &amp; R. Suhag · <a href="https://doi.org/10.1257/rct.15086-1.0" target="_blank" rel="noopener">AEA RCT Registry</a></span></li>
+        <li><span class="wt">What Does Venture Capital Actually Finance? Scale and Structure around the World</span>
+          <span class="wc">with S. Reyes, K. Freeman, P. Mauro, M. Cruz, P. Hernando-Kaminsky, J. Huber &amp; C. Meh</span></li>
+        <li><span class="wt">The World Business Dynamics Database</span>
+          <span class="wc">with M. Cruz, F. Dal Ri, S. Muzi, M. Schiffbauer, M. Sáenz Somarriba &amp; F. Roviello</span></li>
+        <li><span class="wt">Bank Credit and Trade Diversion: Evidence from Mexican Firms after the U.S.–China Trade War</span>
+          <span class="wc">with A. M. Fernandes, O. Gallardo Martínez, D. Ghose, A. Ragoussis &amp; F. Urbina</span></li>
+        <li><span class="wt">AI Tools for Evaluating Business Models in Colombia</span>
+          <span class="wc">with S. Reyes</span></li>
+        <li><span class="wt">Venture Capital Development and Exits</span>
+          <span class="wc">with S. Reyes &amp; J. Gonzalez-Uribe</span></li>
+      </ul>
     </div>
+  </section>
+
+  <!-- TALKS -->
+  <section id="talks">
+    <span class="eyebrow">Selected talks</span>
+    <h2 class="section-title">Recent &amp; invited presentations</h2>
+    <ul class="talks reveal">
+      <li>
+        <span class="tvenue">NBER Summer Institute — Development &amp; Entrepreneurship Workshops</span><span class="tyr">2024 · 2026</span>
+        <span class="tpaper">Startups in Africa</span>
+      </li>
+      <li>
+        <span class="tvenue">ASSA / AEA Annual Meeting</span><span class="tyr">2022 · 2026</span>
+        <span class="tpaper">Management and Misallocation in Mexico · Startups in Africa</span>
+      </li>
+      <li>
+        <span class="tvenue">Western Finance Association (WFA)</span><span class="tyr">2026</span>
+        <span class="tpaper">How Do Emerging Markets Investors Make Decisions?</span>
+      </li>
+      <li>
+        <span class="tvenue">Chicago Booth Conference on Finance and Development</span><span class="tyr">2025</span>
+        <span class="tpaper">Startups in Africa</span>
+      </li>
+      <li>
+        <span class="tvenue">Society for Economic Dynamics (SED) Annual Meeting</span><span class="tyr">2021</span>
+        <span class="tpaper">Management and Misallocation in Mexico</span>
+      </li>
+      <li>
+        <span class="tvenue">Royal Economic Society Annual Conference</span><span class="tyr">2024</span>
+        <span class="tpaper">Disruptive Technologies and Finance: Digital Startups in Africa</span>
+      </li>
+      <li>
+        <span class="tvenue">Columbia Private Equity Conference</span><span class="tyr">2024 · 2026</span>
+        <span class="tpaper">Startups in Africa · Emerging Markets Investors</span>
+      </li>
+      <li>
+        <span class="tvenue">LACEA / LAMES Annual Meeting</span><span class="tyr">2015 · 2019</span>
+        <span class="tpaper">ICT &amp; Competition · Management and Misallocation in Mexico</span>
+      </li>
+    </ul>
   </section>
 
   <!-- TEACHING -->
@@ -587,6 +720,7 @@
     <span class="eyebrow">Honors</span>
     <h2 class="section-title">Fellowships &amp; awards</h2>
     <ul class="awards reveal">
+      <li><span class="yr">2026</span><span>ECA VPU Team Award, World Bank Group</span></li>
       <li><span class="yr">2022</span><span>SAR &amp; LCR VPU Team Awards, World Bank Group</span></li>
       <li><span class="yr">2020</span><span>Fellow, Mexican National System of Researchers (SNI) — Level 1</span></li>
       <li><span class="yr">2019</span><span>Research grant, Inter-American Development Bank — firm concentration and income inequality in Mexico</span></li>
@@ -613,7 +747,9 @@
       <ul class="links-list reveal">
         <li><a href="mailto:mpereiralopez@ifc.org"><span class="label">Email</span><span class="val">mpereiralopez@ifc.org</span></a></li>
         <li><a href="https://scholar.google.com/citations?user=W-WWIFcAAAAJ&hl=en" target="_blank" rel="noopener"><span class="label">Google Scholar</span><span class="val">profile →</span></a></li>
-        <li><a href="CV_Mariana_Pereira-Lopez.docx"><span class="label">Curriculum Vitae</span><span class="val">download →</span></a></li>
+        <li><a href="https://www.linkedin.com/in/mariana-pereira-42589736" target="_blank" rel="noopener"><span class="label">LinkedIn</span><span class="val">connect →</span></a></li>
+        <li><a href="https://x.com/mariana_ppl11" target="_blank" rel="noopener"><span class="label">X (Twitter)</span><span class="val">@mariana_ppl11 →</span></a></li>
+        <li><a href="CV_Mariana_Pereira-Lopez.pdf"><span class="label">Curriculum Vitae</span><span class="val">download (PDF) →</span></a></li>
         <li><a href="https://www.worldbank.org/en/about/unit/unit-dec" target="_blank" rel="noopener"><span class="label">Affiliation</span><span class="val">DEC · World Bank Group →</span></a></li>
       </ul>
     </div>
@@ -621,7 +757,7 @@
 
   <footer>
     <span>© <span id="yr"></span> Mariana Pereira-López</span>
-    <span class="mono">Updated June 2026 · Washington, DC</span>
+    <span class="mono">Updated June 2026 · Bethesda, MD</span>
   </footer>
 
 </main>
@@ -645,7 +781,9 @@
     tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
     tab.setAttribute('aria-selected', 'true');
     document.querySelectorAll('.pub-panel').forEach(p => p.hidden = true);
-    document.getElementById(tab.dataset.panel).hidden = false;
+    const panel = document.getElementById(tab.dataset.panel);
+    panel.hidden = false;
+    panel.classList.add('in');
   }));
 
   // reveal on scroll
